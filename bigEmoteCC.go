@@ -91,8 +91,8 @@
 			{{$id := str (index . 0 2)}}
 			{{$ext := ".png"}}{{$typeExt := "Image"}}
 			{{if $animated}}{{$ext = ".gif"}} {{$typeExt = "Gif"}}{{end}}
-			{{"({{https://cdn.discordapp.com/emojis/%s%s $id $ext}})"}}
-			{{print "[" $typeExt " Link](https://cdn.discordapp.com/emojis/" $id $ext ")" -}}
+			{{(print "https://cdn.discordapp.com/emojis/" $id $ext)}}
+			{{deleteMessage nil $waitMsg 0}}
 		{{end}}
 	{{else}}
 		{{range $emoji}}
@@ -100,7 +100,7 @@
 			{{$id := index . 2}}
 			{{$ext := ".png"}}{{$typeExt := "Image"}}
 			{{if $animated}}{{$ext = ".gif"}}{{$typeExt = "Gif"}}{{end}}
-			{{- $fields = $fields.Append (sdict "name" (print "`" (index (split (index . 0) ":") 1) "`") "value" (print "[" $typeExt " Link](https://cdn.discordapp.com/emojis/" $id $ext ")") "inline" true) -}}
+			{{(print "[" $typeExt " Link](https://cdn.discordapp.com/emojis/" $id $ext ")")}}
 		{{end}}
 		{{$embed.Set "title" "This message contains more than one emoji."}}
 		{{$embed.Set "fields" $fields}}
