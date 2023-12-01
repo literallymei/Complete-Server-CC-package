@@ -6,7 +6,7 @@
 	ORIGINAL Author: dvoraknt <https://github.com/dvoraknt>
 	LINK TO ORIGINAL CODE: https://github.com/dvoraknt/deebos-yag-CCs/blob/main/on-official-repo/bigEmoji-v2.go.tmpl
 
-	EDITED BY Mei-Jabami: https://github.com/Mei-Jabami
+	EDITED BY Mei-Jabami: https://github.com/literallymei
 
 	Mei's (me) Note: The original code would send the enlarged emoji PNG as a part of an embed in chat.
 	This version of the code would send the emoji itself and that's it. Just what your average user wants.
